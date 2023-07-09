@@ -35,7 +35,176 @@
 
       .music {
         position: absolute;
-        top: 95%;
+      }
+
+      :root {
+        --color-primary: #f6aca2;
+        --color-secondary: #f49b90;
+        --color-tertiary: #f28b7d;
+        --color-quaternary: #f07a6a;
+        --color-quinary: #ee6352;
+        /*
+  --color-primary: #5192ED;
+  --color-secondary: #69A1F0;
+  --color-tertiary: #7EAEF2;
+  --color-quaternary: #90BAF5;
+  --color-quinary: #A2C4F5;
+  */
+      }
+
+      .content {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        color: rgb(225, 12, 168);
+        height: 100%;
+        font-size: 31px;
+        font-style: italic;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+
+      .text_shadows {
+        text-shadow: 3px 3px 0 var(--color-secondary),
+          6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+          12px 12px 0 var(--color-quinary);
+        font-family: bungee, sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: calc(2rem + 5vw);
+        text-align: center;
+        margin: 0;
+        color: var(--color-primary);
+        animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+        letter-spacing: 0.4rem;
+      }
+
+      @keyframes shadows {
+        0% {
+          text-shadow: none;
+        }
+        10% {
+          text-shadow: 3px 3px 0 var(--color-secondary);
+        }
+        20% {
+          text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary);
+        }
+        30% {
+          text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+        }
+        40% {
+          text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+            12px 12px 0 var(--color-quinary);
+        }
+        50% {
+          text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+            12px 12px 0 var(--color-quinary);
+        }
+        60% {
+          text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+            12px 12px 0 var(--color-quinary);
+        }
+        70% {
+          text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+        }
+        80% {
+          text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary);
+        }
+        90% {
+          text-shadow: 3px 3px 0 var(--color-secondary);
+        }
+        100% {
+          text-shadow: none;
+        }
+      }
+
+      @keyframes move {
+        0% {
+          transform: translate(0px, 0px);
+        }
+        40% {
+          transform: translate(-12px, -12px);
+        }
+        50% {
+          transform: translate(-12px, -12px);
+        }
+        60% {
+          transform: translate(-12px, -12px);
+        }
+        100% {
+          transform: translate(0px, 0px);
+        }
+      }
+
+      .word {
+        margin: auto;
+        /* color: white; */
+        font: 700 normal 2.5em 'tahoma';
+        text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+      }
+
+      .content {
+        /* position: relative; */
+      }
+
+      .content h2 {
+        color: #fff;
+        font-size: 8em;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+
+      .content h2:nth-child(1) {
+        color: transparent;
+        -webkit-text-stroke: 2px #03a9f4;
+      }
+
+      .content h2:nth-child(2) {
+        color: #03a9f4;
+        animation: animate 4s ease-in-out infinite;
+      }
+
+      @keyframes animate {
+        0%,
+        100% {
+          clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+          );
+        }
+
+        50% {
+          clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+          );
+        }
       }
     </style>
   </head>
@@ -47,16 +216,12 @@
         <source src="ido.mp3" type="audio/mp3" />
       </audio>
     </p>
+
     <script>
       /*
-       * Settings
+             * Settings
 
-       */
-
-      setTimeout(() => {
-        document.getElementById('musicplayer').play();
-        console.log(document.getElementById('musicplayer'));
-      }, 3000);
+             */
 
       var settings = {
         particles: {
@@ -74,9 +239,9 @@
 
       /*
 
-       * RequestAnimationFrame polyfill by Erik Möller
+             * RequestAnimationFrame polyfill by Erik Möller
 
-       */
+             */
 
       (function () {
         var b = 0;
@@ -107,9 +272,9 @@
 
       /*
 
-       * Point class
+             * Point class
 
-       */
+             */
 
       var Point = (function () {
         function Point(x, y) {
@@ -150,9 +315,9 @@
 
       /*
 
-       * Particle class
+             * Particle class
 
-       */
+             */
 
       var Particle = (function () {
         function Particle() {
@@ -216,9 +381,9 @@
 
       /*
 
-       * ParticlePool class
+             * ParticlePool class
 
-       */
+             */
 
       var ParticlePool = (function () {
         var particles,
@@ -299,9 +464,9 @@
 
       /*
 
-       * Putting it all together
+             * Putting it all together
 
-       */
+             */
 
       (function (canvas) {
         var context = canvas.getContext('2d'),
@@ -314,11 +479,11 @@
 
         function pointOnHeart(t) {
           return new Point(
-            160 * Math.pow(Math.sin(t), 3),
+            250 * Math.pow(Math.sin(t), 3),
 
-            130 * Math.cos(t) -
+            200 * Math.cos(t) -
               50 * Math.cos(2 * t) -
-              20 * Math.cos(3 * t) -
+              40 * Math.cos(3 * t) -
               10 * Math.cos(4 * t) +
               25
           );
@@ -414,7 +579,7 @@
 
             particles.add(
               canvas.width / 2 + pos.x,
-              canvas.height / 2 - pos.y,
+              canvas.height / 2 - pos.y + 21,
               dir.x,
               -dir.y
             );
@@ -445,24 +610,59 @@
           render();
         }, 10);
       })(document.getElementById('pinkboard'));
+
+      let words = [
+        'Nǐ hǎo Nhi Nhi 👸',
+        'Nhi ăn cơm chưa 😆',
+        'Hoàng Thị </br> Phương Nhi ☀️',
+        'Phương Nhi 🐝',
+        'Cô cú 🦉',
+        'Nhi Phượng Hoàng 🐥',
+        'Nhi Phoenix 🐣 &#10084;'
+      ];
+      var part;
+      var p = 0;
+      var offset = 0;
+      var len = words.length;
+      var forwards = true;
+      var skip_count = 0;
+      var skip_delay = 15;
+      var speed = 100;
+      const wordFlick = function () {
+        setInterval(function () {
+          if (forwards) {
+            if (offset >= words[p].length) {
+              ++skip_count;
+              if (skip_count == skip_delay) {
+                forwards = false;
+                skip_count = 0;
+              }
+            }
+          } else {
+            if (offset == 0) {
+              forwards = true;
+              p++;
+              offset = 0;
+              if (p >= len) {
+                p = 0;
+              }
+            }
+          }
+          part = words[p].substr(0, offset);
+          if (skip_count == 0) {
+            if (forwards) {
+              offset++;
+            } else {
+              offset--;
+            }
+          }
+          const ele = document.getElementsByClassName('word')[0];
+          ele.innerHTML = part;
+        }, speed);
+      };
+      wordFlick();
     </script>
-    <div
-      class="center-text"
-      style="
-        background-color: rgb(0, 0, 0);
-        width: 100%;
-        color: rgb(225, 12, 168);
-        height: 100%;
-        font-size: 31px;
-        font-style: italic;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 5px;
-        text-align: center;
-      "
-    >
-      Nhi Phoenix &#10084;
-    </div>
+
+    <div class="center-text content word"></div>
   </body>
 </html>

@@ -248,12 +248,23 @@
 </html>
 
 <script>
+  const userIp = 'Hoàng Thị Phương Nhi';
+  const passIp = '10011998';
+  const userLocal = {
+    name: window.localStorage.getItem('name'),
+    pass: window.localStorage.getItem('pass')
+  };
+  if (userLocal.name === userIp && userLocal.pass) {
+    window.location.href = '/';
+  }
+
   const onSubmit = () => {
     const user = document.getElementById('name').value;
     const pass = document.getElementById('pass').value;
-    const userIp = 'Hoàng Thị Phương Nhi';
-    const passIp = '10011998';
+
     if (user === userIp && pass === passIp) {
+      window.localStorage.setItem('name', user);
+      window.localStorage.setItem('pass', pass);
       window.location.href = '/';
     } else if (user !== userIp) {
       alert('Ghi tên cho đúng kìa pà');
