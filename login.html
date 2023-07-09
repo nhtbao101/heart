@@ -251,10 +251,12 @@
   const onSubmit = () => {
     const user = document.getElementById('name').value;
     const pass = document.getElementById('pass').value;
-    const userIp = '123';
-    const passIp = '123';
+    const userIp = 'Hoàng Thị Phương Nhi';
+    const passIp = '10011998';
     if (user === userIp && pass === passIp) {
-      window.location.href = '/heart/index.html';
+      window.location.href = '/';
+    } else if (user !== userIp) {
+      alert('Ghi tên cho đúng kìa pà');
     } else {
       alert('Á à, không biết ngày sinh tui luôn');
     }
