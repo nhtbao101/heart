@@ -15,6 +15,7 @@
     <style>
       html,
       body {
+        position: relative;
         height: 100%;
 
         padding: 0;
@@ -31,18 +32,33 @@
 
         height: 100%;
       }
+
+      .music {
+        position: absolute;
+        left: 50%;
+        top: 95%;
+        transform: translate(-50%, -50%);
+      }
     </style>
   </head>
 
   <body>
     <canvas id="pinkboard"></canvas>
-
+    <p class="music">
+      <audio controls autoplay="true" id="musicplayer">
+        <source src="ido.mp3" type="audio/mp3" />
+      </audio>
+    </p>
     <script>
       /*
+       * Settings
 
- * Settings
+       */
 
- */
+      setTimeout(() => {
+        document.getElementById('musicplayer').play();
+        console.log(document.getElementById('musicplayer'));
+      }, 3000);
 
       var settings = {
         particles: {
@@ -60,9 +76,9 @@
 
       /*
 
- * RequestAnimationFrame polyfill by Erik Möller
+       * RequestAnimationFrame polyfill by Erik Möller
 
- */
+       */
 
       (function () {
         var b = 0;
@@ -93,9 +109,9 @@
 
       /*
 
- * Point class
+       * Point class
 
- */
+       */
 
       var Point = (function () {
         function Point(x, y) {
@@ -136,9 +152,9 @@
 
       /*
 
- * Particle class
+       * Particle class
 
- */
+       */
 
       var Particle = (function () {
         function Particle() {
@@ -202,9 +218,9 @@
 
       /*
 
- * ParticlePool class
+       * ParticlePool class
 
- */
+       */
 
       var ParticlePool = (function () {
         var particles,
@@ -285,9 +301,9 @@
 
       /*
 
- * Putting it all together
+       * Putting it all together
 
- */
+       */
 
       (function (canvas) {
         var context = canvas.getContext('2d'),
