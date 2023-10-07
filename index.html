@@ -66,8 +66,12 @@
         align-content: center;
         justify-content: center;
         background-color: rgb(0, 0, 0);
+        background-image: url('./nhi.jpeg');
+        background-repeat: no-repeat;
+        background-position-y: center;
+        /* background-color: antiquewhite; */
         width: 100%;
-        color: rgb(225, 12, 168);
+        color: rgb(213 100 100);
         height: 100%;
         font-size: 31px;
         font-style: italic;
@@ -164,10 +168,6 @@
         text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
       }
 
-      .content {
-        /* position: relative; */
-      }
-
       .content h2 {
         color: #fff;
         font-size: 8em;
@@ -240,10 +240,11 @@
         /* background-color: #ffd54f; */
         display: flex;
         width: 100%;
+        justify-content: center;
       }
 
       h1 {
-        font-weight: normal;
+        font-weight: bold;
         letter-spacing: 0.125rem;
         /* text-transform: uppercase; */
         color: #ffd54f;
@@ -253,10 +254,11 @@
       li {
         color: #ffd54f;
         display: inline-block;
+
         /* font-size: 1.5em; */
         font-size: 40px;
         list-style-type: none;
-        padding: 1em;
+        padding: 0.8rem 1em;
         /* text-transform: uppercase; */
       }
 
@@ -871,7 +873,7 @@
     </script>
     <div class="container">
       <h1 id="headline">Counting the days to see you 🐥</h1>
-      <div id="countdown" class="countdown center-text content">
+      <div id="countdown" class="countdown center-text">
         <ul class="countdown-list">
           <li class="countdown-item"><span id="days"></span>Days</li>
           <li class="countdown-item"><span id="hours"></span>Hours</li>
