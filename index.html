@@ -346,7 +346,13 @@
       const date = new Date();
       const hour = date.getHours();
       var musical;
-      var words;
+      var words = [
+        'Chúc Phương Nhi </br> 20 - 10',
+        'vui vẻeeeeeee </br> nhaaaaaaa 🌸',
+        'luôn xinh đẹp </br> dễ thươnggggg 🐝',
+        'sớm tìm được chỗ mới </br>(ĐN city đang chờ </br> e nèeee 😆)',
+        'mau mau có ny đi nhaaa </br> 🐤'
+      ];
       function getWords(hour) {
         musical = 'cupid.mp3';
         // words = [
@@ -360,61 +366,61 @@
         // ];
         if (hour >= 23 || hour <= 5) {
           musical = 'cupid.mp3';
-          words = [
-            'Nǐ hǎo Nhi Nhi 👸',
-            'Ngủ sớm đi Nhi ơiiiiii 🥺',
-            'Chúc Nhi Nhi </br> Ngủ ngonnnnnnn 🌙🌙',
-            'Hoàng Thị </br> Phương Nhi ☀️',
-            'Nhi Phoenix 🐣 &#10084;'
-          ];
+          // words = [
+          //   'Nǐ hǎo Nhi Nhi 👸',
+          //   'Ngủ sớm đi Nhi ơiiiiii 🥺',
+          //   'Chúc Nhi Nhi </br> Ngủ ngonnnnnnn 🌙🌙',
+          //   'Hoàng Thị </br> Phương Nhi ☀️',
+          //   'Nhi Phoenix 🐣 &#10084;'
+          // ];
         } else if (hour > 5 && hour <= 9) {
           musical = 'cupid.mp3';
-          words = [
-            'Nǐ hǎo Phương Nhi 👸',
-            'Chúc Nhi ngày mới </br> vuiiiiii vẻ 🌸',
-            'Phương Nhi 🐝',
-            'Nhi Phượng Hoàng 🐥',
-            'Nhi Phoenix 🐣 &#10084;'
-          ];
+          // words = [
+          //   'Nǐ hǎo Phương Nhi 👸',
+          //   'Chúc Nhi ngày mới </br> vuiiiiii vẻ 🌸',
+          //   'Phương Nhi 🐝',
+          //   'Nhi Phượng Hoàng 🐥',
+          //   'Nhi Phoenix 🐣 &#10084;'
+          // ];
         } else if (hour > 9 && hour <= 13) {
           musical = 'bo-em-vao-balo.mp3';
-          words = [
-            'Nǐ hǎo Nhi Phương 👸',
-            'Nhi ăn cơm chưaaa 🍱',
-            'Nhi Phượng Hoàng 🐥',
-            'Nhi Phoenix 🐣 &#10084;'
-          ];
+          // words = [
+          //   'Nǐ hǎo Nhi Phương 👸',
+          //   'Nhi ăn cơm chưaaa 🍱',
+          //   'Nhi Phượng Hoàng 🐥',
+          //   'Nhi Phoenix 🐣 &#10084;'
+          // ];
         } else if (hour > 13 && hour <= 17) {
           musical = 'way-backhome.mp3';
-          words = [
-            'Nǐ hǎo </br> Nhi Phượng Hoàng 👸',
-            'Chúc Phương Nhi </br> buổi chiều vuiiiiii vẻ 🍀',
-            'Hoàng Thị </br> Phương Nhi ☀️',
-            'Phương Nhi 🐝',
-            'Nhi Phoenix 🐣 &#10084;'
-          ];
+          // words = [
+          //   'Nǐ hǎo </br> Nhi Phượng Hoàng 👸',
+          //   'Chúc Phương Nhi </br> buổi chiều vuiiiiii vẻ 🍀',
+          //   'Hoàng Thị </br> Phương Nhi ☀️',
+          //   'Phương Nhi 🐝',
+          //   'Nhi Phoenix 🐣 &#10084;'
+          // ];
         } else if (hour >= 18 && hour <= 20) {
           musical = 'dem-ngay-xa-em.mp3';
-          words = [
-            'Nǐ hǎo Nhi Phoenix 👸',
-            'Sóng bắt đầu từ gió 🌊 </br> Gió bắt đầu từ đâu 💨',
-            'Nhi Phoenix 🐣 &#10084;'
-          ];
+          // words = [
+          //   'Nǐ hǎo Nhi Phoenix 👸',
+          //   'Sóng bắt đầu từ gió 🌊 </br> Gió bắt đầu từ đâu 💨',
+          //   'Nhi Phoenix 🐣 &#10084;'
+          // ];
         } else if (hour > 20 && hour < 23) {
           musical = 'dem-ngay-xa-em.mp3';
-          words = [
-            'Nǐ hǎo Nhiiiiii 👸',
-            'Chúc Nhi Phượng Hoàng </br> buổi tối vuiiiiii vẻ 🦹‍♀️',
-            'Nhi Phoenix 🐣 &#10084;'
-          ];
+          // words = [
+          //   'Nǐ hǎo Nhiiiiii 👸',
+          //   'Chúc Nhi Phượng Hoàng </br> buổi tối vuiiiiii vẻ 🦹‍♀️',
+          //   'Nhi Phoenix 🐣 &#10084;'
+          // ];
         } else {
           musical = 'cupid.mp3';
-          words = [
-            'Nǐ hǎo Nhyyyyyy 👸',
-            'Nhi ăn cơm chưa 😆',
-            'Nhi Phượng Hoàng 🐥',
-            'Nhi Phoenix 🐣 &#10084;'
-          ];
+          // words = [
+          //   'Nǐ hǎo Nhyyyyyy 👸',
+          //   'Nhi ăn cơm chưa 😆',
+          //   'Nhi Phượng Hoàng 🐥',
+          //   'Nhi Phoenix 🐣 &#10084;'
+          // ];
         }
       }
       getWords(hour);
@@ -836,7 +842,7 @@
       var forwards = true;
       var skip_count = 0;
       var skip_delay = 15;
-      var speed = 100;
+      var speed = 80;
       const wordFlick = function () {
         setInterval(function () {
           if (forwards) {
